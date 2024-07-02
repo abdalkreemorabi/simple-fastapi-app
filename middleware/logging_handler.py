@@ -44,5 +44,5 @@ class LogHandlerMiddleware(BaseHTTPMiddleware):
                 network={"client": {"ip": client_host, "port": client_port}},
                 duration=process_time,
             )
-            response.headers["X-Process-Time"] = str(process_time / 10 ** 9)
+            response.headers["X-Process-Time"] = str(process_time / 10**9)
             return response

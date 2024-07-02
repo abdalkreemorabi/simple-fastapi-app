@@ -9,10 +9,7 @@ dotenv.load_dotenv()
 
 class MongoDbSettings(BaseSettings):
     model_config = SettingsConfigDict(
-        env_file=".env",
-        env_prefix="MONGO_DB_",
-        case_sensitive=True,
-        extra="ignore"
+        env_file=".env", env_prefix="MONGO_DB_", case_sensitive=True, extra="ignore"
     )
 
     HOST: str
@@ -28,9 +25,7 @@ class MongoDbSettings(BaseSettings):
 
 class AppSettings(BaseSettings):
     model_config = SettingsConfigDict(
-        env_file=".env",
-        case_sensitive=True,
-        extra="ignore"
+        env_file=".env", case_sensitive=True, extra="ignore"
     )
 
     SECRET_KEY: str

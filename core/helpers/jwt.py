@@ -39,9 +39,9 @@ class JWTHelper:
         return self._genereate_token(user)
 
     def _genereate_token(
-            self,
-            user: User | Candidate,
-            expires_delta: timedelta = None,
+        self,
+        user: User | Candidate,
+        expires_delta: timedelta = None,
     ):
         if expires_delta:
             expire = datetime.utcnow() + expires_delta
@@ -77,8 +77,7 @@ class JWTHelper:
             if user_uuid is None:
                 raise InvalidTokenPayload
 
-            obj = (
-                await User.find_one(User.uuid == uuid.UUID(user_uuid)))
+            obj = await User.find_one(User.uuid == uuid.UUID(user_uuid))
             return obj
         except (InvalidTokenPayload, UserNotFound, CandidateNotFound) as e:
             raise e

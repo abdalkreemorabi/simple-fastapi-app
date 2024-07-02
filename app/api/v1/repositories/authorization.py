@@ -4,9 +4,7 @@ from core.exceptions import InvalidCredentials, UserNotFound
 from core.helpers import hash_helper, jwt_helper
 
 
-async def _login(
-        payload: authorization_serializers.LoginFormSerializer, model: User
-):
+async def _login(payload: authorization_serializers.LoginFormSerializer, model: User):
     user = await model.find(model.email == str(payload.email)).first_or_none()
 
     if not user:

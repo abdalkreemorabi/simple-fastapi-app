@@ -6,6 +6,7 @@ from fastapi import FastAPI
 from starlette.middleware.cors import CORSMiddleware
 
 from app.api.v1.views import v1_router
+
 # from app.api.v1.views import v1_router
 from core.database import init_database_connection
 from core.utils import logger

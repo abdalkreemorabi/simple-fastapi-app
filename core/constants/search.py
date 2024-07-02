@@ -7,5 +7,5 @@ CANDIDATE_SUPPORTED_FILTERS = {
     "nationality",
     "city",
     "salary",
-    "gender"
+    "gender",
 }

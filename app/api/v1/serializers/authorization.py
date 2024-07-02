@@ -21,9 +21,3 @@ class LoginOut(ResponseModel):
     """Login Response"""
 
     data: LoginResponseSerializer
-
-
-
-
-
-

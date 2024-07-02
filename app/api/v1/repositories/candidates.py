@@ -82,7 +82,7 @@ async def get_candidate(candidate_uuid: str) -> Candidate:
 
 
 async def create_candidate(
-        payload: candidates_serializers.RegisterCandidateSerializer,
+    payload: candidates_serializers.RegisterCandidateSerializer,
 ) -> Candidate:
     """
     Async function to create candidate.
@@ -101,7 +101,7 @@ async def create_candidate(
 
 
 async def update_candidate(
-        candidate: Candidate, payload: candidates_serializers.UpdateCandidateSerializer
+    candidate: Candidate, payload: candidates_serializers.UpdateCandidateSerializer
 ) -> Candidate:
     """
     Async function to update candidate.
