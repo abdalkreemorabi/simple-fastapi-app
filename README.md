@@ -113,5 +113,5 @@ for easy deployment.</h5>
 ---
 ### API documentation
 
-All APIs are available on `{{base_url}}/docs or
-{{base_url}}/redoc paths with Swagger or ReDoc.
+All APIs are available on `{{base_url}}/docs` or
+`{{base_url}}/redoc` paths with Swagger or ReDoc.
