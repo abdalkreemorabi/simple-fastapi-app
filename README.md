@@ -106,8 +106,8 @@ pytest -xv
 
 ## Docker Usage
 
-<h5>There are also [Dockerfile](Dockerfile)
-to run the service and [Dockerfile-worker](Dockerfile-worker) to run the worker
+<h5>There are also [Dockerfile]
+to run the service and [Dockerfile-worker] to run the worker
 for easy deployment.</h5>
 
 ---
