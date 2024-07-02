@@ -1,5 +1,4 @@
-import functools
-from typing import TypeVar
+from typing import TypeVar, Literal
 
 import dotenv
 from pydantic_settings import BaseSettings, SettingsConfigDict
@@ -27,11 +26,12 @@ class AppSettings(BaseSettings):
     model_config = SettingsConfigDict(
         env_file=".env", case_sensitive=True, extra="ignore"
     )
-
-    SECRET_KEY: str
-    ALGORITHM: str
-    ACCESS_TOKEN_EXPIRE_MINUTES: int
-    CELERY_BROKER_URL: str
+    ENV: Literal["PROD", "DEV"] = "PROD"
+    SECRET_KEY: str = "secret"
+    ALGORITHM: str = "HS256"
+    ACCESS_TOKEN_EXPIRE_MINUTES: int = 60 * 24 * 7
+    CELERY_BROKER_URL: str | None = None
+    SENTRY_DSN: str | None = None
 
 
 TSettings = TypeVar("TSettings", bound=BaseSettings)

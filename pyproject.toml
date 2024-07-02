@@ -28,6 +28,7 @@ anyio = "^4.2.0"
 pytest-asyncio = "^0.23.3"
 celery = "^5.3.4"
 redis = "^5.0.7"
+sentry-sdk = "^2.7.1"
 
 
 [tool.poetry.group.dev.dependencies]

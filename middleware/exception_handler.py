@@ -4,6 +4,14 @@ from fastapi import Request
 from fastapi.encoders import jsonable_encoder
 from fastapi.responses import JSONResponse
 from starlette.middleware.base import BaseHTTPMiddleware
+import sentry_sdk as sentry
+from core.settings import AppSettings, get_settings
+
+sentry.init(
+    dsn=get_settings(AppSettings).SENTRY_DSN,
+    sample_rate=0.5,
+    environment=get_settings(AppSettings).ENV,
+)
 
 
 class ExceptionHandlerMiddleware(BaseHTTPMiddleware):
