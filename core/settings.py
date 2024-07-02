@@ -26,7 +26,7 @@ class AppSettings(BaseSettings):
     model_config = SettingsConfigDict(
         env_file=".env", case_sensitive=True, extra="ignore"
     )
-    ENV: Literal["PROD", "DEV"] = "PROD"
+    ENV: Literal["PROD", "DEV"] = "DEV"
     SECRET_KEY: str = "secret"
     ALGORITHM: str = "HS256"
     ACCESS_TOKEN_EXPIRE_MINUTES: int = 60 * 24 * 7
