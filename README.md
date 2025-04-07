@@ -1,4 +1,4 @@
-# Signit - Simple FastAPI Application
+Simple FastAPI Application
 
 ![Python Version](https://img.shields.io/badge/python-3.10%2B-blue)
 
